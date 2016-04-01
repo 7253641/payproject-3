@@ -1,0 +1,98 @@
+@import "./public.less";
+
+
+html,body{
+  height: 100%;
+  background:#ccc ;
+}
+
+.help{
+  color: @base-color*3;
+  .title{
+    text-align: center;
+    color: @color4;
+    font-size: @fontsize12+8;
+    height: 45px;
+    line-height: 45px;
+    background: @color8;
+  }
+  .title1{
+    font-size: @fontsize12+6;
+    padding:  0 30px;
+  }
+  .title2{
+    text-align: center;
+    font-size: @fontsize12+4;
+    padding:  15px 30px;
+  }
+  .tab{
+    background: @color8;
+    border-bottom: 1px solid @color11;
+    font-size:@fontsize12+2;
+    .fir_tab{
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+    a{
+      color:@base-color*3 ;
+      height:40px;
+      line-height: 40px;
+      width: 100%;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .sublist{
+      background:@base-color*14 ;
+      li{
+        border-top:1px solid @base-color*13;
+        position: relative;
+        padding: 0 10px 0 50px;
+        .icon_next_page{
+          position: absolute;
+          right: 14px;
+          top: 8px;
+
+        }
+        &.active {
+          a{
+            color: @color9;
+          }
+        }
+      }
+    }
+  }
+  .tips{
+    display: inline-block;
+    text-align: center;
+    line-height: 25px;
+    width: 25px;
+    height: 25px;
+    color: @color8;
+    background: @color4;
+  }
+  .describe {
+    //    padding:16px 0;
+    margin:13px 30px 0;
+    background: @color13;
+    p{
+      padding-top:16px;
+      padding-bottom: 16px;
+      position: relative;
+    }
+    .tips{
+      position: absolute;
+      top:0px;
+      left:0px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  p{
+    line-height: 25px;
+    font-size: @fontsize12+2;
+    padding:0 30px;
+  }
+}

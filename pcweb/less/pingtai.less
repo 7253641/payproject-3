@@ -1,0 +1,173 @@
+@import "./animate.less";
+@import "./icomoon.less";
+@import "./header.less";
+.whole_zone{
+	width: 100%;
+	min-height: 500px;
+	background: url("../images/bg.png") repeat;
+	.pingtai_pic{
+		width: 100%;
+		height: 436px;
+		padding:0;
+		overflow: hidden;
+		position: relative;
+		li{
+			width: 100%;
+			height: 100%;
+			list-style: none;
+			display: none;
+			&:first-child{
+				display: block;
+			}
+		}
+		img{
+			width: 100%;
+			vertical-align: middle;
+		}
+		.pro_btn{
+			width: 1000px;
+			height: 70px;
+			position: absolute;
+			left:50%;
+			top:50%;
+			margin-left:-500px;
+			margin-top: -35px;
+			.pro_btn_a{
+				width: 40px;
+				height: 100%;
+				display: block;
+				background: rgba(0,0,0,0.1);
+				&:hover{
+					background: rgba(255,255,255,0.2);
+				}
+				span{
+					width: 100%;
+					height: 100%;
+					display: block;
+				}
+			}
+			.left_btn{
+				float: left;
+				span{
+					background: url("../images/icon.png") -188px -70px no-repeat;
+				}
+			}
+			.right_btn{
+				float: right;
+				span{
+					background: url("../images/icon.png") -131px -70px no-repeat;
+				}
+			}
+		}
+	}
+	.whole{
+		width: @width1000;
+		height: auto;
+		min-height: 318px;
+		margin:0px auto;
+		// background: red;
+		color: @color_gray1;
+		h3.introduce{
+			font-size: 16px;
+		}
+		p.introduce{
+			margin:0 15px;
+			font-size: 14px;
+			margin-bottom: 50px;
+		}
+		.pingtai_con_title{
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			margin:20px 0;
+			background: @color_blue;
+			color:@color_white;
+			text-indent: 23px;
+		}
+		.pingtai_con{
+			width: 100%;
+			height: 200px;
+			border:1px solid red;
+			background: #fff;
+			margin-bottom: 20px;
+			border:1px solid rgb( 199, 199, 199 );
+			box-shadow: 0px 2px 3px 0px rgb( 0, 0, 0 );
+			-webkit-box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.19);
+		  	-moz-box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.19);
+		  	-ms-box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.19);
+		  	-o-box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.19);
+		  	box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.19);
+		  	a{
+		  		text-decoration: none;
+		  		cursor: default;
+		  	}
+		  	.pingtai_con_click{
+		  		width: 100%;
+		  		height: 100%;
+		  		display: block;
+		  		cursor: pointer;
+		  	}
+			.pingtai_vpn_master{
+				width: 550px;
+				height: 180px;
+				float: left;
+				position: relative;
+				img{
+					margin:20px;
+					width: 510px;
+					height: 160px;
+				}
+				.vpn_click{
+					width: 172px;
+					height: 46px;
+					display: block;
+					cursor: pointer;
+					// border:1px solid red;
+					position: absolute;
+					left:50%;
+					top:50%;
+
+					margin-left: -86px;
+					margin-top: -13px;
+				}
+			}
+			.pingtai_vpn_info{
+				width: 448px;
+				height: 100%;
+				float: right;
+				h3{
+					padding-left: 0px;
+					height: 45px;
+					line-height: 45px;
+					font-size: 26px;
+					color: @color_gray1;
+					.i{
+						width:48px;height: 48px;display: block;float: left;
+						margin-right: 10px;
+						// border:1px solid red;
+					}
+				}
+				.icon-keys{
+					background: url("../images/icon.png") -7px -530px no-repeat;
+				}
+				.icon-bags{
+					background: url("../images/icon.png") -65px -530px no-repeat;
+				}
+				.icon-bird{
+					background: url("../images/icon.png") -125px -530px no-repeat;
+				}
+				p.pingtai_vpn_p{
+					font-size: 16px;
+					color: @color_gray3;
+					margin-right: 20px;
+				}
+			}
+		}
+		.hr{
+			width: 100%;
+			height: 40px;
+		}
+	}
+
+}
+

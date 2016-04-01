@@ -1,0 +1,110 @@
+@import "./public.less";
+
+
+html,body{
+  height: 100%;
+  background:@base-color*14 ;
+}
+
+.member{
+  color: @base-color*3;
+  .title{
+    text-align: center;
+    color: @color4;
+    font-size: @fontsize12+8;
+    height: 45px;
+    line-height: 45px;
+    background: @color8;
+  }
+  .bannnerbg{
+    background: url("../images/bg1.jpg") no-repeat;
+    height: 127px;
+    position: relative;
+    background-size: cover;
+    .nickname{
+      position: absolute;
+      bottom:10px;
+      left:100px;
+      color: @base-color*15;
+    }
+    .phpto{
+      position: absolute;
+      width: 84px;
+      bottom: -50px;
+      left:10px;
+      z-index: 1;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .inforlist{
+    padding-left:100px;
+    p{
+      line-height: 24px;
+      font-size:  @fontsize12+2;
+      span{
+        margin-right: 10px;
+
+      }
+    }
+  }
+  .sublist{
+    li{
+      background:@base-color*15 ;
+      margin-bottom: 10px;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 10px;
+      position: relative;
+      a{
+        color:  @base-color*3;
+        text-decoration: none;
+      }
+      .icon_next_page{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+    }
+  }
+  .dl-horizontal{
+    dt{
+      float: left;
+      width: 27%;
+      clear: left;
+      text-align: right;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #999999;
+
+      line-height: 20px;
+    }
+    dd{
+      
+      line-height: 20px;
+      margin-left: 30%;
+    }
+  }
+
+
+  .table1{
+    font-size:  @fontsize12+2;
+    .na1{
+      text-align: right;
+    }
+    td {
+      span{
+        color:@base-color*9 ;
+      }
+    }
+    input[type='text']{
+      height: 30px;
+      padding-left: 5px;
+      width: 90%;
+      border: 1px solid @base-color*13;
+      border-radius: 3px;
+    }
+  }
+}

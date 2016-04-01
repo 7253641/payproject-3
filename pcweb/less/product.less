@@ -1,0 +1,128 @@
+@import "./animate.less";
+@import "./icomoon.less";
+@import "./header.less";
+.whole_zone{
+	width: 100%;
+	min-height: 500px;
+	background: url("../images/bg.png") repeat;
+	.pingtai_pic{
+		width: 100%;
+		height: 436px;
+		padding:0;
+		overflow: hidden;
+		position: relative;
+		li{
+			width: 100%;
+			height: 100%;
+			list-style: none;
+			display: none;
+			&:first-child{
+				display: block;
+			}
+		}
+		img{
+			width: 100%;
+			vertical-align: middle;
+		}
+		.pro_btn{
+			width: 1000px;
+			height: 70px;
+			position: absolute;
+			left:50%;
+			top:50%;
+			margin-left:-500px;
+			margin-top: -35px;
+			.pro_btn_a{
+				width: 40px;
+				height: 100%;
+				display: block;
+				background: rgba(0,0,0,0.1);
+				&:hover{
+					background: rgba(255,255,255,0.2);
+				}
+				span{
+					width: 100%;
+					height: 100%;
+					display: block;
+				}
+			}
+			.left_btn{
+				float: left;
+				span{
+					background: url("../images/icon.png") -188px -70px no-repeat;
+				}
+			}
+			.right_btn{
+				float: right;
+				span{
+					background: url("../images/icon.png") -131px -70px no-repeat;
+				}
+			}
+		}
+	}
+	.whole{
+		width: @width980;
+		height: auto;
+		min-height: 318px;
+		margin:0px auto;
+		// background: red;
+		color: @color_gray1;
+		h3.introduce{
+			font-size: 16px;
+		}
+		p{
+			margin:0 15px;
+			font-size: 14px;
+			margin-bottom: 50px;
+		}
+		.pro_con{
+			width: 100%;
+			height: 260px;
+			border:1px solid red;
+			background: #fff;
+			border:1px solid rgb( 199, 199, 199 );
+			box-shadow: 0px 2px 3px 0px rgb( 0, 0, 0 );
+			-webkit-box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.19);
+		  	-moz-box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.19);
+		  	-ms-box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.19);
+		  	-o-box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.19);
+		  	box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.19);
+			.pro_con_title{
+				width: 100%;
+				height: 40px;
+				line-height: 40px;
+				margin:0;
+				background: @color_blue;
+				color:@color_white;
+				text-indent: 23px;
+			}
+			.vpn_master{
+				width: 960px;
+				height: 180px;
+				margin:20px auto;
+				position: relative;
+				// background: red;
+				img{
+					width: 100%;
+				}
+				.vpn_click{
+					width: 172px;
+					height: 46px;
+					display: block;
+					// border:1px solid red;
+					position: absolute;
+					left:50%;
+					top:50%;
+
+					margin-left: -86px;
+					margin-top: -23px;
+				}
+			}
+		}
+		.hr{
+			width: 100%;
+			height: 40px;
+		}
+	}
+
+}

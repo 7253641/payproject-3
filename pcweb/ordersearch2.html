@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="less/bootstrap.css">
+    <link rel="stylesheet" href="css/member.css"/>
+    <link rel="stylesheet" href="less/bootstrap-datetimepicker.min.css">
+</head>
+<body>
+<!-- header部分 -->
+<div class="user">
+        <div class="user_login">
+            <ul class="user_zone">
+                <li>
+                    <a href="#">wuqifan@nuagetimes.com</a>
+                </li>
+                <li>|</li>
+                <li class="logout">
+                    <a href="#">登出</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="article">
+        <div class="header">
+            <header role="banner" id="fh5co-header">
+                <div class="fluid-container">
+                    <nav class="navbar navbar-default">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="home.html"></a>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="pingtai.html" data-nav-section="home"><span>平台介绍</span></a></li>
+                                <li class="active"><a href="product.html"><span>产品中心</span></a></li>
+                                <li><a href="product.html" data-nav-section="testimony"><span>个人账户</span></a></li>
+                                <li><a href="#" data-nav-section="pricing"><span>帮助中心</span></a></li>
+                            </ul>
+                        </div>
+                    </nav>
+              </div>
+            </header>
+        </div>
+    </div>
+<!-- header end -->
+
+
+<div class="bg">
+<div class="clearfix wrap">
+    <ul class="breadcrumb pull-right ">
+        <li>您当前的位置:</li>
+        <!--<li><a href="#">Home</a> </li>-->
+        <!--<li><a href="#">Library</a> </li>-->
+        <li class="active">帮助中心</li>
+    </ul>
+</div>
+<div class="clearfix wrap">
+    <div class="ordersearch">
+        <div class="content">
+            <h2 class="title">订单查询</h2>
+             <div class="member_title container-fluid">
+                 <div class="row">
+                     <form action="" class="form-inline">
+                     <div class="col-xs-12 col-sm-3 date" id="datetimepicker" data-date="12-02-2012" data-date-format="dd-mm-yyyy" data-link-field="dtp_input1">
+                         日期：<input type="text" size="16" class="form-control" placeholder="购买日期" id="data1"/>
+                         <!--<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>-->
+                         <input type="hidden" id="dtp_input1" value="">
+                     </div>
+                     <div class="col-xs-12 col-sm-3">
+                         支付：<select class="form-control">
+                                 <option>1111111</option>
+                                 <option>11111112</option>
+                                 <option>111113</option>
+                                 <option>1111114</option>
+                                 <option>1111115</option>
+                             </select>
+                     </div>
+                     <div class="col-xs-12 col-sm-4">
+                         订单号：<input type="text" class="form-control" placeholder="订单号"/>
+                     </div>
+                     <div class="col-xs-12 col-sm-2 form-group">
+                            <button type="submit" class="btn search_btn">搜索</button>
+                     </div>
+                     </form>
+                 </div>
+             </div>
+            <div class="order_content">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th><span>订单号</span></th>
+                        <th><span>购买日期</span></th>
+                        <th><span>商品详情</span></th>
+                        <th><span>金额</span></th>
+                        <th><span>支付方式</span></th>
+                        <th><span>说明</span></th>
+                        <th><span class="last">状态</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>GE-11111111111</td>
+                        <td>2016-03-10 21:18</td>
+                        <td>VPn master流量</td>
+                        <td>NT$500</td>
+                        <td>GASH点数卡</td>
+                        <td>赠送淘淘乐购物平台100淘币</td>
+                        <td>
+                            <p><i class="icon icon_sucess_small"></i>已完成</p>
+                            <p><a href="javascript:;">申请退款</a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>GE-11111111111</td>
+                        <td>2016-03-10 21:18</td>
+                        <td>VPn master流量</td>
+                        <td>NT$500</td>
+                        <td>GASH点数卡</td>
+                        <td>赠送淘淘乐购物平台100淘币</td>
+                        <td>
+                            <p><i class="icon icon_error_small"></i>未完成</p>
+                            <p><a href="javascript:;">继续支付</a></p>
+                        </td>
+                    </tr>
+                    <tr class="disabled">
+                        <td>GE-11111111111</td>
+                        <td>2016-03-10 21:18</td>
+                        <td>VPn master流量</td>
+                        <td>NT$500</td>
+                        <td>GASH点数卡</td>
+                        <td>赠送淘淘乐购物平台100淘币</td>
+                        <td>
+                            <p>已退款</p>
+                            <!--<p>&nbsp;</p>-->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+                <p class="text-center">无搜索结果，请确认条件时都正确,<a href="javascript:;">联系我们</a></p>
+            </div>
+            <div class="page">
+                <div class="pagination">
+                    <ul>
+                        <li><a href="#">Prev</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">Next</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+<!-- footer start -->
+<div class="footer">
+    <div class="hrs"></div>
+    <div class="copyrights">
+        <ul class="item_list">
+            <li><a href="#"><span></span>服务条款</a></li>
+            <li><a href="#"><span></span>隐私协议</a></li>
+            <li><a href="#"><span></span>安全保障</a></li>
+            <li><a href="#"><span></span>联系我们</a></li>
+        </ul>
+        <p>@2016, gainextreme.com, All Rights Reserved</p>
+    </div>
+</div>
+<!-- footer end -->
+
+
+<script data-main="js/yjj" src="js/require.js"></script>
+
+</body>
+</html>

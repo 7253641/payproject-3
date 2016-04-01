@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css"/>
+</head>
+<body>
+
+<div class="login">
+    <div>
+        <form id="registerform" method="get">
+            <table>
+                <tbody>
+                <tr>
+                    <td class="title">
+                        注册中心
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <i class="orange">*</i>邮箱：
+                    </td>
+                </tr>
+                <tr>
+
+                    <td><input type="email" name="username" placeholder="请输入邮箱账号进行注册"/></td>
+                </tr>
+                <tr height="8px">
+
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><i class="orange">*</i>设置密码：</td>
+                </tr>
+                <tr>
+
+                    <td><input type="password" name="password" placeholder="请输入不少于8位的账号密码" id="field"/><i class="icon icon_nosee passwordsee"></i></td>
+                </tr>
+                <tr height="8px">
+
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><i class="orange">*</i>确认密码：</td>
+                </tr>
+                <tr>
+
+                    <td><input type="password" name="rpassword" placeholder="请再次输入密码"/><i class="icon icon_nosee passwordsee"></i></td>
+                </tr>
+                <tr height="8px">
+
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        手机号码：
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="telephone" placeholder="请输入可以联系的手机号码" class="ignore"/></td>
+                </tr>
+                <tr>
+                    <td class="signup"><a href="javascript:;">已有账号登入</a></td>
+                </tr>
+                <tr>
+
+                    <td>
+                        <div class="agreement">
+                            <p><input type="checkbox" name="agreement" checked="checked" />&nbsp;<a href="javascript:;">我已阅读并同意《淘淘乐用户服务协议》</a></p>
+                            <p><input type="submit" class="btnsubmit" value="注册登入"/></p>
+                        </div>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+
+        </form>
+
+    </div>
+</div>
+
+
+<script data-main="js/index" src="js/require.js"></script>
+</body>
+</html>

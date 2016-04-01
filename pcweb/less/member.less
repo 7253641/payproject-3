@@ -1,0 +1,185 @@
+@import "./public.less";
+@import "./header.less";
+
+
+.tab_describe{
+    h2.title{
+      font-size: @fontsize12+6;
+      text-align: center;
+      padding: 20px 0;
+    }
+    h3.title{
+      font-size: @fontsize12+6;
+      padding:  0 30px;
+    }
+  .tips{
+    display: inline-block;
+    text-align: center;
+    line-height: 25px;
+    width: 25px;
+    height: 25px;
+    color: @color8;
+    background: @color4;
+  }
+  .describe {
+//    padding:16px 0;
+    margin:0 30px;
+    background: @color13;
+    p{
+      padding-top:16px;
+      padding-bottom: 16px;
+      position: relative;
+    }
+    .tips{
+      position: absolute;
+      top:0px;
+      left:0px;
+    }
+  }
+  p{
+    line-height: 28px;
+    font-size: @fontsize12+2;
+    padding:0 30px;
+  }
+}
+
+
+.member_title{
+  padding:10px 30px;
+  .name{
+    padding-top:10px;
+    border-right:3px solid @color4 ;
+    .blue{
+      font-size: @fontsize12+4;
+      margin:0px;
+    }
+  }
+  .search{
+    width: 366px;
+  }
+  .search_btn{
+
+    background: @color4;
+    font-size: @fontsize12+4;
+    color: @color8;
+  }
+  .form-search{
+    padding-top:10px;
+    .btn{
+      width: 117px;
+      background: @color4;
+      font-size: @fontsize12+4;
+      color: @color8;
+    }
+  }
+}
+.order_content{
+  padding:0px 30px;
+}
+.table {
+  thead{
+    tr{
+      border-top:3px solid @color4;
+      th{
+        text-align: center;
+        background-color: @color12;
+        border-bottom: none;
+
+        span{
+          border-right:1px solid  @color4;
+          width: 100%;
+          display: inline-block;
+          padding:5px 0;
+        }
+        span.last{
+          border-right: none;
+        }
+      }
+
+    }
+  }
+  tbody{
+      tr{
+        &:nth-of-type(odd) {
+          background-color: @color14;
+        }
+      &.disabled{
+        color:#999;
+        height: 60px;
+      }
+      td{
+        text-align: center;
+        border-bottom: 1px solid @color12;
+        vertical-align: middle;
+        i.icon{
+          vertical-align: middle;
+        }
+        p{
+          margin:0px;
+        }
+      }
+    }
+  }
+}
+
+
+
+.ordersearch{
+  background: @color8;
+  border:1px solid @color11;
+  margin-bottom: 42px;
+  .title{
+    color:@color4 ;
+    text-align: center;
+  }
+}
+
+.member_h{
+  padding:35px;
+  background: #fff;
+  margin-bottom: 16px;
+}
+.member_c{
+  padding-top:50px;
+  padding-bottom: 50px;
+  margin-bottom: 42px;
+  background: #fff;
+
+  dt{
+    font-weight: normal;
+    font-size: @fontsize12+8;
+  }
+  .radio_size{
+    font-size: @fontsize12+8;
+    input{
+      height: 23px;
+    }
+  }
+
+  .btn_cancel{
+    font-size: @fontsize12+6;
+    width: 150px;
+    border: 1px solid @color4;
+    color: @color4;
+    background: @color8;
+  }
+  .btn_edite{
+    width: 150px;
+    font-size: @fontsize12+6;
+    border: 1px solid @color4;
+    background: @color4;
+    color: @color8;
+  }
+}
+.personal_info{
+  font-size: ;
+  .edit_info{
+    font-size:@fontsize12+6 ;
+    a{
+      margin-right: 30px;
+    }
+  }
+  .black{
+    font-size: @fontsize12+6;
+  }
+}

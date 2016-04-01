@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="less/bootstrap.css">
+    <link rel="stylesheet" href="css/login.css"/>
+</head>
+<body>
+<!-- Button trigger modal -->
+<button onClick="test()" class="btn btn-primary btn-lg">
+    Launch demo modal
+</button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">login modal</button>
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="gridSystemModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+
+                    <div class="row login">
+                        <div class="col-xs-12 col-sm-4 login_fl">
+                              <i class="icon icon_login_logo">登入</i>
+                        </div>
+                        <div class="col-xs-12 col-sm-8 login_fr">
+
+
+                            <form id="loginForm" method="get">
+                               <table>
+                                   <tbody>
+                                     <tr>
+                                         <td class="w140"></td>
+                                         <td class="title w348">账号登入</td>
+                                     </tr>
+                                     <tr>
+                                         <td class="w140">邮箱：</td>
+                                         <td><input type="email" name="username" placeholder="请输入邮箱账号"/></td>
+                                     </tr>
+                                     <tr height="8px">
+                                         <td></td>
+                                         <td></td>
+                                     </tr>
+                                     <tr>
+                                         <td class="w140">密码：</td>
+                                         <td><input type="password" name="password" placeholder="请输入账号密码"/><i class="icon icon_nosee passwordsee"></i></td>
+                                     </tr>
+                                     <tr height="8px">
+                                         <td></td>
+                                         <td></td>
+                                     </tr>
+                                     <tr>
+                                         <td class="w140"></td>
+                                         <td><input type="submit" class="btnsubmit" value="登入"/></td>
+                                     </tr>
+                                     <tr>
+                                         <td class="w140"></td>
+                                         <td class="signup"><a href="javascript:;">去注册</a></td>
+                                     </tr>
+                                   <tr>
+                                       <td></td>
+                                       <td>
+                                           <div class="third_party_login">
+                                               <p class="p0">第三方登入</p>
+                                               <p class="p1"><a href="javascript:;"><i class="icon icon_third_login1"></i>淘淘乐账号登入</a></p>
+                                               <p class="p2"><a href="javascript:;"><i class="icon icon_third_login2"></i>Google play 账号登入</a></p>
+                                               <p class="p3"><a href="javascript:;"><i class="icon icon_third_login3"></i>Facebook账号登入</a></p>
+                                           </div>
+                                       </td>
+                                   </tr>
+
+                                   </tbody>
+                               </table>
+
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="js/jquery-1.12.1.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script>
+    $(document).ready(function() {
+
+        $('.bs-example-modal-lg').on('hide.bs.modal', function () {
+            alert('嘿，我听说您喜欢模态框...');})
+
+        function closemodel (){
+            $('.bs-example-modal-lg').modal('hide');
+        }
+
+
+
+        $("#loginForm").validate({
+            //debug:true ,
+            //如果这个参数为true，那么表单不会提交，只进行检查，调试时十分方便
+
+            rules:{
+                username:{required:true},
+                password:{required:true}
+            },
+            messages:{
+                username:{required:"请输入用户名",email:"邮箱格式错误"},
+                password:{required :'请输入密码'}
+            },
+            errorElement:"p",//用来创建错误提示信息标签(可自定义)
+            onkeyup: false,
+            ignore: ".ignore",
+            focusCleanup:'true',
+            validClass:"success",
+            errorPlacement:function(error, element){//处理错误信息位置，在下面的复选框用到
+                if(element.is(":radio")){
+                    error.appendTo(element.parent());
+                }else{
+                    console.log('yjj');
+                    error.insertAfter(element);
+                }
+            },
+
+            success : function(label){
+            //验证成功后执行的回调函数，label指向上面那个错误提 示信息标签em
+                label.text( ' ' ).addClass("success")  //添加上自定义的success类
+            },
+            submitHandler: function(form)
+            {
+                alert(1);
+
+                $.ajax({
+                    url:'check.php',
+                    type:'post',
+                    dataType:'json',
+                    data:$('#loginForm').serialize(),
+                    success:function(data){
+                        $.each(data,function(i,v){
+                            if(v.msg == false){
+                                alert("类型已存在！");
+                            }else{
+                                showTypeList(v.typeData);
+                            }
+
+                        });
+                    },
+                    error:function(){
+                        alert('信息错误')
+                    }
+                });
+                return false;//阻止表单提交
+            },
+            invalidHandler: function(form, validator) {  //不通过回调
+                return false;
+            }
+
+
+        });
+    });
+
+</script>
+</body>
+</html>
